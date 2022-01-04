@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import {setUserId, setUserName, setUserPassword } from '../store/LoginStore/Login'
 import {setName} from '../store/LoginStore/userData'
+import OnSubmitScreen from "./OnSubmitScreen";
 
 const LoginScreen = (props) => {
   const [name, setname] = useState("");
@@ -28,6 +29,7 @@ const LoginScreen = (props) => {
     dispatch(setUserPassword(password))
     dispatch(setName(email))
     console.log("stateValue======  ", stateValue)
+    return <OnSubmitScreen  /> 
   }
 
   renderHeader = () => {
